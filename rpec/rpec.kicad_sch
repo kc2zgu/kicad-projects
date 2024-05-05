@@ -6,8 +6,9 @@
 	(paper "A")
 	(title_block
 		(title "Raspberry Pi Essential Connectivity hat")
-		(date "2024-04-26")
-		(rev "1.0")
+		(date "2024-05-03")
+		(rev "1.1")
+		(company "© 2024 Stephen A. Cavilia, CC BY-SA")
 	)
 	(lib_symbols
 		(symbol "Analog_ADC:MCP3428x-xSL"
@@ -3298,22 +3299,23 @@
 				)
 			)
 		)
-		(symbol "Device:Crystal_GND3"
+		(symbol "Device:Crystal"
+			(pin_numbers hide)
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "Y"
-				(at 0 5.715 0)
+				(at 0 3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Crystal_GND3"
-				(at 0 3.81 0)
+			(property "Value" "Crystal"
+				(at 0 -3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3338,7 +3340,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Three pin crystal, GND on pin 3"
+			(property "Description" "Two pin crystal"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3365,7 +3367,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Crystal_GND3_0_1"
+			(symbol "Crystal_0_1"
 				(rectangle
 					(start -1.143 2.54)
 					(end 1.143 -2.54)
@@ -3403,31 +3405,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -3.81) (xy 0 -3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.905 0) (xy 2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.905 1.27) (xy 1.905 -1.27)
+						(xy 1.905 -1.27) (xy 1.905 1.27)
 					)
 					(stroke
 						(width 0.508)
@@ -3439,7 +3417,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 -2.286) (xy -2.54 -3.556) (xy 2.54 -3.556) (xy 2.54 -2.286)
+						(xy 2.54 0) (xy 1.905 0)
 					)
 					(stroke
 						(width 0)
@@ -3450,7 +3428,7 @@
 					)
 				)
 			)
-			(symbol "Crystal_GND3_1_1"
+			(symbol "Crystal_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 1.27)
@@ -3480,24 +3458,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 1.27)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5692,6 +5652,16 @@
 	)
 	(wire
 		(pts
+			(xy 248.92 124.46) (xy 248.92 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f42af2f-ef7a-4604-82b3-b11d008e1b14")
+	)
+	(wire
+		(pts
 			(xy 237.49 34.29) (xy 237.49 36.83)
 		)
 		(stroke
@@ -6079,6 +6049,16 @@
 			(type default)
 		)
 		(uuid "44db5013-c875-4f29-83c1-2c663ef9aa03")
+	)
+	(wire
+		(pts
+			(xy 248.92 128.27) (xy 241.3 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "461f27cb-ace7-473f-8641-63dde323cdd5")
 	)
 	(wire
 		(pts
@@ -6582,6 +6562,16 @@
 	)
 	(wire
 		(pts
+			(xy 248.92 133.35) (xy 248.92 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "804f8695-76c7-4be3-80ad-3128ee9bd35c")
+	)
+	(wire
+		(pts
 			(xy 157.48 73.66) (xy 157.48 76.2)
 		)
 		(stroke
@@ -6729,6 +6719,16 @@
 			(type solid)
 		)
 		(uuid "92611e1c-9e36-42b2-a6c7-1ef2cb0c90da")
+	)
+	(wire
+		(pts
+			(xy 241.3 130.81) (xy 262.89 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9452d90b-cce4-45c8-849b-7c40ecf5dfb4")
 	)
 	(wire
 		(pts
@@ -7149,6 +7149,16 @@
 			(type default)
 		)
 		(uuid "cfdfd48d-20f0-4074-8778-adb9c8f4f80e")
+	)
+	(wire
+		(pts
+			(xy 241.3 133.35) (xy 248.92 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d017605b-1dd5-4dae-9669-acad356662be")
 	)
 	(wire
 		(pts
@@ -8139,6 +8149,17 @@
 			(justify right bottom)
 		)
 		(uuid "9dfa2e67-af89-46ec-bc23-7a4e4d6b014f")
+	)
+	(label "GPIO18{slash}PCM.CLK"
+		(at 262.89 130.81 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9fb55d16-6aee-4ad2-b070-f71fced21db1")
 	)
 	(label "GPIO2{slash}SDA1"
 		(at 127 135.89 0)
@@ -9329,6 +9350,69 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 248.92 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1ee8d4df-9fcc-4019-b914-ad3be2a5dd73")
+		(property "Reference" "#PWR033"
+			(at 248.92 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 249.0343 144.0244 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 248.92 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 248.92 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 248.92 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ad0e04b4-bb11-4b91-91bd-ac9e81ee43ec")
+		)
+		(instances
+			(project "rpec"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
 		(at 114.3 69.85 0)
 		(unit 1)
@@ -9606,79 +9690,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Crystal_GND3")
-		(at 92.71 138.43 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2d08b5d0-ed95-4e9d-a24f-e853526fc5b7")
-		(property "Reference" "Y1"
-			(at 96.0374 139.6422 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Crystal_GND3"
-			(at 96.0374 137.2179 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Crystal:Crystal_AT310_D3.0mm_L10.0mm_Horizontal_1EP_style1"
-			(at 92.71 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 92.71 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Three pin crystal, GND on pin 3"
-			(at 92.71 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "088a6a0a-793d-4431-8382-754015fbd186")
-		)
-		(pin "2"
-			(uuid "200d20f1-af02-41b1-a3d2-7af7c7144f8e")
-		)
-		(pin "3"
-			(uuid "635674d5-130c-4abf-9568-b53a30666376")
-		)
-		(instances
-			(project "rpec"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "Y1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
 		(at 163.83 43.18 270)
 		(unit 1)
@@ -9840,7 +9851,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "30K 1%"
 			(at 27.051 112.9721 0)
 			(effects
 				(font
@@ -9909,7 +9920,7 @@
 				)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "100K 1%"
 			(at 147.32 124.3908 90)
 			(effects
 				(font
@@ -10083,6 +10094,76 @@
 			(project "rpec"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Crystal")
+		(at 92.71 138.43 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3d9da51c-f7c1-431e-a408-1419685fb534")
+		(property "Reference" "Y1"
+			(at 96.0374 137.2178 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Crystal"
+			(at 96.0374 139.6421 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm"
+			(at 92.71 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 92.71 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Two pin crystal"
+			(at 92.71 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "76f5da15-a5a9-4779-97a8-6e95da664fb4")
+		)
+		(pin "2"
+			(uuid "8a524660-6a31-48ff-95b8-ae172ee3fd47")
+		)
+		(instances
+			(project "rpec"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "Y1")
 					(unit 1)
 				)
 			)
@@ -10361,6 +10442,69 @@
 			(project "rpec"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 248.92 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "474faf52-e54e-46b9-8a85-c0a68bbc0867")
+		(property "Reference" "#PWR032"
+			(at 248.92 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 249.2883 120.1356 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 248.92 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 248.92 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 248.92 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fab7d256-f212-4bc1-b519-71cd015e7a44")
+		)
+		(instances
+			(project "rpec"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -10668,7 +10812,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "10K 1%"
 			(at 27.051 129.4821 0)
 			(effects
 				(font
@@ -11264,6 +11408,77 @@
 			(project "rpec"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "JP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x03_Pin")
+		(at 152.4 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7d606fcb-86a1-4f32-9b05-e0ab02a1385d")
+		(property "Reference" "J14"
+			(at 153.035 148.1793 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x03_Pin"
+			(at 153.035 150.6036 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical"
+			(at 152.4 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 152.4 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 152.4 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "d9237922-87df-44c6-8f14-376af7bb01e0")
+		)
+		(pin "1"
+			(uuid "8d1a6006-aa78-4279-8944-c820558c2eb9")
+		)
+		(pin "2"
+			(uuid "c1d920c5-2288-4d69-8865-8ffe6e2792fa")
+		)
+		(instances
+			(project "rpec"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "J14")
 					(unit 1)
 				)
 			)
@@ -11870,7 +12085,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_MiniMELF_Handsoldering"
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
 			(at 114.3 115.57 0)
 			(effects
 				(font
@@ -12705,6 +12920,80 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x04_Pin")
+		(at 236.22 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dfaf9c5e-7625-4c13-97bc-e3a44545ff39")
+		(property "Reference" "J13"
+			(at 236.855 124.0493 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04_Pin"
+			(at 236.855 126.4736 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical"
+			(at 236.22 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 236.22 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 236.22 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3f438781-cc89-4cab-983b-9ee3e3984b3c")
+		)
+		(pin "4"
+			(uuid "04df2562-59e1-4e19-b20e-b3a66d1a7e4d")
+		)
+		(pin "2"
+			(uuid "4f288de3-7f5b-48ba-a1fb-974f85fca8be")
+		)
+		(pin "3"
+			(uuid "c8cce3fc-2ca8-47f1-b9c4-87f99a6a8963")
+		)
+		(instances
+			(project "rpec"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "J13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D_Schottky")
 		(at 129.54 123.19 0)
 		(unit 1)
@@ -12730,7 +13019,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_MiniMELF_Handsoldering"
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
 			(at 129.54 123.19 0)
 			(effects
 				(font
@@ -12857,7 +13146,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R_US"
+		(property "Value" "100K 1%"
 			(at 160.401 135.8321 0)
 			(effects
 				(font
